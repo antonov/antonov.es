@@ -4,14 +4,14 @@ import Image from "next/image";
 
 const experience = [
   {year: "2022 - Current", 'company' : 'MYTOYS GROUP (OTTO GROUP) ', 'position': 'Senior Drupal Developer - Provide solutions for internal CMS features.'},
-  {year: "2018 - 2022", 'company' : 'HIBERUS DIGITAL BUSINESS', 'position': 'Engineering manager - Helped to growth out the CMS department from 30 to 150 devs.'},
+  {year: "2018 - 2022", 'company' : 'HIBERUS DIGITAL BUSINESS', 'position': 'Engineering manager - Helped to grow out the CMS department from 30 to 150 devs.'},
   {year: "2010 - 2018", 'company' : 'EVERIS (NTT DATA) ', 'position': 'Drupal Architect - Worked in numerous international projects mainly with Drupal 7/8.'},
   {year: "2008 - 2010", 'company' : 'ADICAE (Spanish banks customer association)', 'position': 'Freelance Consultant - Created an internal platform to manage more than 100k members.'},
-  {year: "2006 - 2008", 'company' : 'HUELLA DIGITAL (Digital printing company)', 'position': 'CTO - Created and managed company websites and information systems.'},
+  {year: "2007 - 2008", 'company' : 'HUELLA DIGITAL (Digital printing company)', 'position': 'CTO - Created and managed company websites and information systems.'},
 ]
 const education = [
   {year: "2017 - 2022", 'university' : 'University of Wales (CESTE)', 'degree': 'Bachelor Honours Degree in Computer Science - First-Class Honours'},
-  {year: "2017 - 2022", 'university' : 'Montessori College', 'degree': 'Technician in exploitation of the information systems.'},
+  {year: "2004 - 2006", 'university' : 'Montessori College', 'degree': 'IT systems technician'},
 ]
 
 const skills = [
@@ -67,7 +67,7 @@ const Home: NextPage = () => {
             </div>
 
             <div className="grid my-4 col-span-5  md:justify-self-start">
-              <Image src="/me.png" alt="Artem Antonov" width="316" height="344"/>
+              <Image src="/me.png" className="rounded-xl" alt="Artem Antonov" width="316" height="344"/>
             </div>
           </div>
         </section>
