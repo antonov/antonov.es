@@ -47,7 +47,7 @@ const Home: NextPage = () => {
                   Hey there! 👋 <br />
                   <h1>
                     <span className="bg-clip-text text-transparent bg-gradient-to-b  from-violet-500 to-violet-50">
-                      I'm Artem Antonov<br />
+                      I&apos;m Artem Antonov<br />
                       Software Engineer
                     </span> 👨‍💻 <br />
                     Based in Salou ☀️ (Spain)<br />
@@ -77,10 +77,10 @@ const Home: NextPage = () => {
             About me
           </h2>
           <div className="">
-            <p className="mt-3">Hello, I'm Artem Antonov, a passionate software engineer based in Salou, Spain. I hold a Bachelor's Honors Degree in Computer Science and specialize in web development, with over 15 years of experience in PHP (Drupal) and Javascript (Next.js, React). </p>
+            <p className="mt-3">Hello, I&apos;m Artem Antonov, a passionate software engineer based in Salou, Spain. I hold a Bachelor&apos;s Honors Degree in Computer Science and specialize in web development, with over 15 years of experience in PHP (Drupal) and Javascript (Next.js, React). </p>
             <p className="mt-3">As a fitness enthusiast, you can often find me hitting the CrossFit box or going for a refreshing run along the beautiful Salou coastline. </p>
-            <p className="mt-3">I'm always up for a challenge and love exploring new technologies to create innovative solutions. </p>
-            <p className="mt-3">Let's connect and build something amazing together!</p>
+            <p className="mt-3">I&apos;m always up for a challenge and love exploring new technologies to create innovative solutions. </p>
+            <p className="mt-3">Let&apos;s connect and build something amazing together!</p>
           </div>
           <div className="flex items-center">
           <a href="https://www.linkedin.com/in/artemantonov/?locale=en_US" 
@@ -126,12 +126,12 @@ const Home: NextPage = () => {
           <div className="">
             <ul className="grid grid-cols-2 md:grid-cols-3">
           { skills?.map((skill, index) => (
-              <li key={`position-${index}`} className="mt-3 col-span-1">
+              <li key={`skill-${index}`} className="mt-3 col-span-1">
                <span className="text-xl bg-clip-text text-transparent bg-gradient-to-b  from-violet-500 to-violet-50">
                 {skill.category}
                 </span>
                 <ul>
-                  { skill.collection.map((item) => (<li>{item}</li>)) }
+                  { skill.collection.map((item, index) => (<li key={`subskill-${index}`}>{item}</li>)) }
                 </ul>
               </li>
               ))}
