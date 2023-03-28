@@ -1,5 +1,8 @@
 /** @type {import('tailwindcss').Config} */
-const { fontFamily } = require('tailwindcss/defaultTheme');
+
+// @ts-ignore
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 
 const config = {
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
@@ -9,7 +12,7 @@ const config = {
         'bullet-image': "url('/dot.svg')",
        },
       'fontFamily' : {
-        sans: ['var(--asap_condensed-font)', ...fontFamily.serif],
+        sans: ['var(--asap_condensed-font)', ...defaultTheme.fontFamily.sans],
       }
     },
   },
