@@ -169,28 +169,30 @@ const Home: NextPage = () => {
           <h2 className="text-black text-lg bg-white p-2 inline-block">
             Get in touch
           </h2>
-          <form className="grid grid-cols-1 mt-3">
-            <div className="">
-              <label htmlFor="name" className="">Name:</label>
-              <input type="text" name="name" className="bg-transparent border-b border-neutral-600" placeholder="Type your name"/>
+          <form className="flex flex-col gap-3 mt-3">
+            <div className="grid grid-cols-10">  
+              <label htmlFor="name" className="col-span-3">Name:</label>
+              <input type="text" name="name" className="bg-transparent border-b border-neutral-600 col-span-7" placeholder="Type your name"/>
             </div> 
-            <div className="">
-              <label htmlFor="name" className="inline-block">Email:</label>
-              <input type="email" name="email" className="bg-transparent border-b border-neutral-600" placeholder="Type your name" />
+            <div className="grid grid-cols-10">
+              <label htmlFor="email" className="col-span-3">Email:</label>
+              <input type="email" name="email" className="bg-transparent border-b border-neutral-600 col-span-7" placeholder="Type your email" />
             </div>
-            <div>
-              <label htmlFor="name" className="inline-block w-1/6">Phone:</label>
-              <input type="tel" name="phone" className="bg-transparent border-b border-neutral-600  " placeholder="Type your name" />
+            <div className="grid grid-cols-10">
+              <label htmlFor="phone" className="col-span-3">Phone:</label>
+              <input type="tel" name="phone" className="bg-transparent border-b border-neutral-600 col-span-7" placeholder="Type your phone number" />
             </div>
-            <div className="">
-              <label>Your budget:</label>
-              <input type="email" name="email" className="bg-transparent border-b border-neutral-600" placeholder="Type your name" />
+            <div className="grid grid-cols-10">
+              <label htmlFor="budget" className="whitespace-nowrap col-span-3">Your budget:</label>
+              <input type="text" name="budget" className="bg-transparent border-b border-neutral-600 col-span-7" placeholder="Type your budget" />
             </div>
-            <div className="">
+            <div className="grid grid-flow-row">
               <label>Message</label>
               <textarea name="message" className="w-full bg-transparent border-b border-neutral-600" placeholder="Type your name" ></textarea>
             </div>
-            <div className="flex justify-end"><button className="bg-violet-500 hover:bg-violet-700 p-3 rounded">Send message</button></div>
+            <div className="grid justify-end">
+              <button className="bg-violet-500 hover:bg-violet-700 p-3 rounded">Send message!</button>
+              </div>
           </form>
         </section>
 
