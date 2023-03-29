@@ -148,7 +148,7 @@ const Home: NextPage = () => {
               <thead className="hidden">
                 <tr>
                   <th>Year</th>
-                  <th>Position</th>
+                  <th>Degree</th>
                 </tr>
               </thead>
               <tbody className="border-l border-gray-500 block pl-4 ">
@@ -164,6 +164,36 @@ const Home: NextPage = () => {
             </table>
           </div>
         </section>
+        
+        <section className="p-8 max-w-6xl mx-auto">
+          <h2 className="text-black text-lg bg-white p-2 inline-block">
+            Get in touch
+          </h2>
+          <form className="grid grid-cols-1 mt-3">
+            <div className="">
+              <label htmlFor="name" className="">Name:</label>
+              <input type="text" name="name" className="bg-transparent border-b border-neutral-600" placeholder="Type your name"/>
+            </div> 
+            <div className="">
+              <label htmlFor="name" className="inline-block">Email:</label>
+              <input type="email" name="email" className="bg-transparent border-b border-neutral-600" placeholder="Type your name" />
+            </div>
+            <div>
+              <label htmlFor="name" className="inline-block w-1/6">Phone:</label>
+              <input type="tel" name="phone" className="bg-transparent border-b border-neutral-600  " placeholder="Type your name" />
+            </div>
+            <div className="">
+              <label>Your budget:</label>
+              <input type="email" name="email" className="bg-transparent border-b border-neutral-600" placeholder="Type your name" />
+            </div>
+            <div className="">
+              <label>Message</label>
+              <textarea name="message" className="w-full bg-transparent border-b border-neutral-600" placeholder="Type your name" ></textarea>
+            </div>
+            <div className="flex justify-end"><button className="bg-violet-500 hover:bg-violet-700 p-3 rounded">Send message</button></div>
+          </form>
+        </section>
+
       </main>
       <footer className="bg-gradient-to-r from-[#3710ac2a] via-[#8e0fdd15] to-[#ffffff21] w-full">
         <div className="max-w-6xl mx-auto p-8">
@@ -225,8 +255,6 @@ const Home: NextPage = () => {
                   </a>
                 </li>
               </ul>
-              
-
             </div>
             
 
