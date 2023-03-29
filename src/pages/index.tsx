@@ -27,8 +27,8 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Artem Antonov - Software engineer based in (Salou) Spain</title>
-        <meta name="description" content="Software engineer based in (Salou) Spain" />
+        <title>Artem Antonov - Software engineer based in Salou 🇪🇸</title>
+        <meta name="description" content="Software engineer based in Salou 🇪🇸" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <header>
