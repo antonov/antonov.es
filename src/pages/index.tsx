@@ -212,7 +212,7 @@ const Home: NextPage = () => {
 
             </div>
             <div>
-              { new Date().getFullYear() } - All rights reserved.
+              © { new Date().getFullYear() } - All rights reserved.
             </div>
 
           </div>
