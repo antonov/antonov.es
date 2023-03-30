@@ -5,6 +5,7 @@ import { SessionProvider } from "next-auth/react";
 import { Asap_Condensed } from 'next/font/google';
 
 import { api } from "~/utils/api";
+import { Analytics } from '@vercel/analytics/react';
 
 import "~/styles/globals.css";
 const asap_condensed = Asap_Condensed({
@@ -27,6 +28,7 @@ const MyApp: AppType<{ session: Session | null }> = ({
     </style>
     <SessionProvider session={session}>
       <Component {...pageProps} />
+      <Analytics />
     </SessionProvider>
     
     </>
