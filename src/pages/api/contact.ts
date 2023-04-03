@@ -43,7 +43,7 @@ export default async function handler(
 
     const contactFormData: ContactFormData = req.body as ContactFormData;
     const text = Object.keys(contactFormData)
-    .map((key) => `${key}: ${contactFormData[key as keyof ContactFormData]}`)
+    .map(key => `${key}: ${contactFormData[key as keyof ContactFormData]}`)
     .join("\n");
 
     const info = await sendEmail({

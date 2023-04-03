@@ -11,16 +11,23 @@ const ContactForm = () => {
       event.preventDefault();
       setIsLoading(true);
       const data = new FormData(event.currentTarget);
-      const JSONdata = JSON.stringify(data)
-      const endpoint = '/api/contact'
+      const JSONdata = JSON.stringify( {
+        name: data.get("name") as string,
+        email: data.get("email") as string,
+        phone: data.get("phone") as string,
+        budget: data.get("budget") as string,
+        message: data.get("message") as string,
+      });
+      
+      const endpoint = '/api/contact';
       const options = {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSONdata,
+         method: 'POST',
+         headers: {
+           'Content-Type': 'application/json',
+         },
+         body: JSONdata,
       }
-      await fetch(endpoint, options);
+      await fetch(endpoint, options); 
       setIsLoading(false);
       setIsSent(true);
     }
