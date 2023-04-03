@@ -7,17 +7,10 @@ const ContactForm = () => {
     const [isSent, setIsSent] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
     
-    const handleSubmit = async (event: { preventDefault: () => void; target: { name: { value: any; }; email: { value: any; }; phone: { value: any; }; budget: { value: any; }; message: { value: any; }; }; }) => {
+    const handleSubmit = async (event: React.FormEvent<HTMLFormElement>): Promise<void>  => {
       event.preventDefault();
       setIsLoading(true);
-      const data = {
-        name: event.target.name.value,
-        email: event.target.email.value,
-        phone: event.target.phone.value,
-        budget: event.target.budget.value,
-        message: event.target.message.value,
-      }
-  
+      const data = new FormData(event.currentTarget);
       const JSONdata = JSON.stringify(data)
       const endpoint = '/api/contact'
       const options = {
@@ -27,15 +20,11 @@ const ContactForm = () => {
         },
         body: JSONdata,
       }
-  
-      const response = await fetch(endpoint, options)
-      const result = await response.json();      
-      
+      await fetch(endpoint, options);
       setIsLoading(false);
       setIsSent(true);
     }
     return (
-      
       <form onSubmit={handleSubmit} className="grid grid-flow-row  md:grid-cols-2 gap-3 mt-3 relative">
         { isSent &&
         <div className="absolute top-0 bottom-0 left-0 right-0 z-10 bg-slate-800 flex flex-row justify-center items-center text-2xl">Your message is sent! 🎉</div>

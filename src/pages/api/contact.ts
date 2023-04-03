@@ -29,13 +29,21 @@ type EmailPayload = {
     })
 }
 
+type ContactFormData = {
+    name: string,
+    email: string,
+    phone: string,
+    budget: string,
+    message: string
+  };
 export default async function handler(
     req: NextApiRequest,
     res: NextApiResponse
   ) {
 
-    const text = Object.keys(req.body)
-    .map(key => `${key}: ${req.body[key]}`)
+    const contactFormData: ContactFormData = req.body as ContactFormData;
+    const text = Object.keys(contactFormData)
+    .map((key) => `${key}: ${contactFormData[key as keyof ContactFormData]}`)
     .join("\n");
 
     const info = await sendEmail({
@@ -47,7 +55,7 @@ export default async function handler(
     if (info.messageId) {
         return res.status(200).json({ message: "Email sent successfully"});
     }
-    
+
     return res.status(500).json({ message: "Server error"});
     
   }
