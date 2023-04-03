@@ -1,6 +1,7 @@
 import { type NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
+import ContactForm from '~/components/ContactForm'
 
 const experience = [
   {year: "2022 - Current", 'company' : 'MYTOYS GROUP (OTTO GROUP) ', 'position': 'Senior Drupal Developer - Provide solutions for internal CMS features.'},
@@ -148,7 +149,7 @@ const Home: NextPage = () => {
               <thead className="hidden">
                 <tr>
                   <th>Year</th>
-                  <th>Position</th>
+                  <th>Degree</th>
                 </tr>
               </thead>
               <tbody className="border-l border-gray-500 block pl-4 ">
@@ -164,6 +165,14 @@ const Home: NextPage = () => {
             </table>
           </div>
         </section>
+        
+        <section className="p-8 max-w-6xl mx-auto">
+          <h2 className="text-black text-lg bg-white p-2 inline-block">
+            Get in touch
+          </h2>
+          <ContactForm />
+        </section>
+
       </main>
       <footer className="bg-gradient-to-r from-[#3710ac2a] via-[#8e0fdd15] to-[#ffffff21] w-full">
         <div className="max-w-6xl mx-auto p-8">
@@ -225,8 +234,6 @@ const Home: NextPage = () => {
                   </a>
                 </li>
               </ul>
-              
-
             </div>
             
 
