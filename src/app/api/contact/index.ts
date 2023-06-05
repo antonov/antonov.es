@@ -1,4 +1,3 @@
-import type { NextApiRequest, NextApiResponse } from "next";
 import nodemailer from "nodemailer"
 
 type EmailPayload = {
@@ -36,12 +35,10 @@ type ContactFormData = {
     budget: string,
     message: string
   };
-export default async function handler(
-    req: NextApiRequest,
-    res: NextApiResponse
-  ) {
+export async function POST(request: Request) {
 
-    const contactFormData: ContactFormData = req.body as ContactFormData;
+
+    const contactFormData: ContactFormData = await request.json() as ContactFormData;
     const text = Object.keys(contactFormData)
     .map(key => `${key}: ${contactFormData[key as keyof ContactFormData]}`)
     .join("\n");
@@ -53,9 +50,9 @@ export default async function handler(
     });
 
     if (info.messageId) {
-        return res.status(200).json({ message: "Email sent successfully"});
+        return new Response(  "Email sent successfully", {status: 200} );
     }
 
-    return res.status(500).json({ message: "Server error"});
+    return new Response("Server error", {status: 500});
     
   }

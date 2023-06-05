@@ -1,6 +1,6 @@
+"use client";
 import { useState } from "react";
 import { LoadingSpinner } from "./LoadingSpinner";
-
 
 const ContactForm = () => {
 

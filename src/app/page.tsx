@@ -1,7 +1,5 @@
-import { type NextPage } from "next";
-import Head from "next/head";
 import Image from "next/image";
-import ContactForm from '~/components/ContactForm'
+import ContactForm from '@/app/components/ContactForm'
 
 const experience = [
   {year: "2022 - Current", 'company' : 'MYTOYS GROUP (OTTO GROUP) ', 'position': 'Senior Drupal Developer - Provide solutions for internal CMS features.'},
@@ -24,14 +22,9 @@ const skills = [
   {category: "Languages", collection: ['English - Advanced level', 'Spanish - Native', 'Russian - Native']}
 ]
 
-const Home: NextPage = () => {
+const Home = () => {
   return (
     <>
-      <Head>
-        <title>Artem Antonov - Software engineer based in Salou 🇪🇸</title>
-        <meta name="description" content="Software engineer based in Salou 🇪🇸" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
       <header>
         <div className="max-w-6xl mx-auto p-8">
           <svg width="93" height="45" viewBox="0 0 93 45" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -68,7 +61,7 @@ const Home: NextPage = () => {
             </div>
 
             <div className="grid my-4 col-span-5  md:justify-self-start">
-              <Image src="/me.png" className="rounded-xl" alt="Artem Antonov" width="316" height="344"/>
+              <Image src="/me.png" className="rounded-xl" alt="Artem Antonov" priority width="316" height="344"/>
             </div>
           </div>
         </section>
@@ -235,7 +228,6 @@ const Home: NextPage = () => {
                 </li>
               </ul>
             </div>
-            
 
           </div>
 
