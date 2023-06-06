@@ -1,6 +1,7 @@
 import './globals.css'
 import { Metadata } from 'next';
 import {Asap_Condensed} from "next/font/google";
+import {Analytics} from "@vercel/analytics/react";
 export const metadata: Metadata = {
     title: 'Artem Antonov - Software engineer based in Salou 🇪🇸',
     description: 'Software engineer based in Salou 🇪🇸',
@@ -19,7 +20,10 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en">
-        <body className={asap_condensed.className}>{children}</body>
+        <body className={asap_condensed.className}>
+        <Analytics />
+        {children}
+        </body>
         </html>
     );
 }
