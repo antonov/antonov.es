@@ -4,20 +4,20 @@ type EmailPayload = {
     to: string
     subject: string
     text: string
-  }
+}
   
-  // Replace with your SMTP credentials
-  const smtpOptions = {
+// Replace with your SMTP credentials
+const smtpOptions = {
     host: process.env.SMTP_HOST || "",
     port: parseInt(process.env.SMTP_PORT || ""),
     secure: true,
     auth: {
       user: process.env.SMTP_USER || "user",
       pass: process.env.SMTP_PASSWORD || "password",
-    },
-  }
+    }
+}
   
-  export const sendEmail = async (data: EmailPayload) => {
+const sendEmail = async (data: EmailPayload) => {
     const transporter = nodemailer.createTransport({
       ...smtpOptions,
     })
@@ -36,8 +36,6 @@ type ContactFormData = {
     message: string
   };
 export async function POST(request: Request) {
-
-
     const contactFormData: ContactFormData = await request.json() as ContactFormData;
     const text = Object.keys(contactFormData)
     .map(key => `${key}: ${contactFormData[key as keyof ContactFormData]}`)
@@ -54,5 +52,4 @@ export async function POST(request: Request) {
     }
 
     return new Response("Server error", {status: 500});
-    
-  }
+}
