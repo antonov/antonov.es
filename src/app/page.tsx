@@ -1,6 +1,8 @@
 import Image from "next/image";
 import ContactForm from '@/app/components/ContactForm'
-
+import {FaAws, FaDrupal, FaLaravel, FaNodeJs, FaPhp, FaReact, FaSymfony, FaWordpress} from "react-icons/fa";
+import {SiTypescript} from "react-icons/si";
+import AnimatedIconsSlider from "./components/AnimatedIconsSlider";
 const experience = [
   {year: "2022 - Current", 'company' : 'MYTOYS GROUP (OTTO GROUP) ', 'position': 'Senior Drupal Developer - Provide solutions for internal CMS features.'},
   {year: "2018 - 2022", 'company' : 'HIBERUS DIGITAL BUSINESS', 'position': 'Engineering manager - Helped to grow out the CMS department from 30 to 150 devs.'},
@@ -20,6 +22,17 @@ const skills = [
   {category: "Projects management", collection: ['Agile (Scrum, Kanban)', 'Jira / Redmine / Trello']},
   {category: "DevOps & Cloud providers", collection: ['Linux Server Administration', 'AWS / Digital Ocean / Hetzner', 'Docker / Kubernetes / CI /CD']},
   {category: "Languages", collection: ['English - Advanced level', 'Spanish - Native', 'Russian - Native']}
+]
+const icons = [
+  FaDrupal,
+  FaPhp,
+  FaWordpress,
+  FaLaravel,
+  FaSymfony,
+  FaReact,
+  FaNodeJs,
+  SiTypescript,
+  FaAws
 ]
 
 const Home = () => {
@@ -64,6 +77,8 @@ const Home = () => {
               <Image src="/me.png" className="rounded-xl" alt="Artem Antonov" priority width="316" height="344"/>
             </div>
           </div>
+          <AnimatedIconsSlider icons={icons} />
+          
         </section>
 
         <section className="p-8 max-w-6xl mx-auto ">

@@ -3,6 +3,47 @@
 @tailwind utilities;
 
 body {
-    @apply bg-black text-white;
-    
+    @apply bg-black text-white;   
 }
+
+.animation {
+    @apply overflow-hidden;
+    @apply whitespace-nowrap;
+    @apply relative;
+    @apply w-full;
+}
+
+.animation:before,
+.animation:after {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    content: "";
+    z-index: 30;
+}
+
+.animation:hover .animation-slide {
+    animation-play-state: paused;
+}
+
+.animation-slide {
+    display: inline-block;
+    animation: 35s slide infinite linear;
+}
+
+.animation-slide svg {
+    display: inline;
+    height: 50px;
+    margin: 0 40px;
+}
+
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
