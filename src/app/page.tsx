@@ -11,7 +11,7 @@ const experience = [
   {year: "2007 - 2008", 'company' : 'HUELLA DIGITAL (Digital printing company)', 'position': 'CTO - Created and managed company websites and information systems.'},
 ]
 const education = [
-  {year: "2017 - 2022", 'university' : 'University of Wales (CESTE)', 'degree': 'Bachelor Honours Degree in Computer Science - First-Class Honours'},
+  {year: "2017 - 2021", 'university' : 'University of Wales (CESTE)', 'degree': 'Bachelor Honours Degree in Computer Science - First-Class Honours'},
   {year: "2004 - 2006", 'university' : 'Montessori College', 'degree': 'IT systems technician'},
 ]
 
